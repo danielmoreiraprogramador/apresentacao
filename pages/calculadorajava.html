@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <script language="javascript">
    
     op=""; //operadores globais.
@@ -9,13 +10,13 @@
     PontoDecimal=false;
     memoria="";
    <!-- ******************************************************-->
-   <!-- ** PROGRAMA APERFEI«OADO POR JEAN CARLO FRAN«A      **-->
+   <!-- ** PROGRAMA APERFEI√áOADO POR JEAN CARLO FRAN√áA      **-->
    <!-- **                                                  **-->
      function verificatecla(caracter){
         if(window.event) { // Internet Explorer
          var tecla = event.keyCode; 
        //alert (PrimeiroNumero);
-       if((tecla > 47) && (tecla < 58)) {  // Se for n˙mero
+       if((tecla > 47) && (tecla < 58)) {  // Se for n√∫mero
        tecla = tecla - 48;
        mostra(tecla);}  
        if (tecla == 46){ // Se for ponto .
@@ -31,13 +32,13 @@
        coleta("*");}     // se for *
        if (tecla == 13){
        calcula();}
-       if ((tecla == 44) || (tecla == 27)){ // Se for DEL ou ESC Atalho para Cancela MemÛria
+       if ((tecla == 44) || (tecla == 27)){ // Se for DEL ou ESC Atalho para Cancela Mem√≥ria
        novocalculo();}
-       if ((tecla == 109) || (tecla == 77)){ // Se for m ou M  Atalho para MemÛria
+       if ((tecla == 109) || (tecla == 77)){ // Se for m ou M  Atalho para Mem√≥ria
        memo();}
-       if ((tecla == 82) || (tecla == 114)){ // Se for r ou R   Atalho para chamar memÛria
+       if ((tecla == 82) || (tecla == 114)){ // Se for r ou R   Atalho para chamar mem√≥ria
        chamamem();}
-       if ((tecla == 99) || (tecla == 67)){  // Se for c ou C  Atalho para cancelar memÛria
+       if ((tecla == 99) || (tecla == 67)){  // Se for c ou C  Atalho para cancelar mem√≥ria
        cancelamemoria();} 
        document.formulario.vazio.focus();
 }
@@ -59,8 +60,8 @@
        document.formulario.calculo.value="";}
        PrimeiroNumero=false;
        if ((x == "." && PontoDecimal==false) || (x != ".")){
-       document.formulario.calculo.value += x; //essa funÁao vai mostrando os numeros na caixa de texto
-   <!--   alinhadireita();    -->                                    //e o +- vai concatenando um numero apos o outro
+       document.formulario.calculo.value += x; //essa fun√ß√£o vai mostrando os n√∫meros na caixa de texto
+   <!--   alinhadireita();    -->                                    //e o +- vai concatenando um n√∫mero ap√≥s o outro
        } 
        if (x == "."){
        PontoDecimal=true;}                      
@@ -164,7 +165,7 @@
   <!-- ******************************************************-->
 
      
-       function novocalculo(){//essa funÁao permite fazer mais um calculo.
+       function novocalculo(){//essa fun√ßao permite fazer mais um calculo.
          num1="";//limpa as variaveis
          num2="";
          op="";
@@ -173,25 +174,25 @@
          PrimeiroNumero=true;
          PontoDecimal=false;
        }
-       function raiz(){ //funÁao que calcula a raiz quadrada
+       function raiz(){ //fun√ß√£o que calcula a raiz quadrada
          num1=document.formulario.calculo.value;
          document.formulario.calculo.value='';
-         resp=Math.sqrt(num1); //funÁao em java script que calcula a raiz quadrada
+         resp=Math.sqrt(num1); //fun√ß√£o em java script que calcula a raiz quadrada
          document.formulario.calculo.value=eval(resp);
        }
-       function cos(){//funÁao que calcula o cosseno
+       function cos(){//fun√ß√£o que calcula o cosseno
          num1=document.formulario.calculo.value;
          document.formulario.calculo.value='';
          resp=Math.cos(num1);
          document.formulario.calculo.value=eval(resp);
        }
-       function sen(){//funÁao que calcula o seno
+       function sen(){//fun√ß√£o que calcula o seno
          num1=document.formulario.calculo.value;
          document.formulario.calculo.value='';
          resp=Math.sin(num1);
          document.formulario.calculo.value=eval(resp);
        }
-       function tan(){//funÁao que calcula a tangente
+       function tan(){//fun√ß√£o que calcula a tangente
          num1=document.formulario.calculo.value;
          document.formulario.calculo.value='';
          resp=Math.tan(num1);
@@ -206,7 +207,7 @@
    
 </script>
 
-<body bgcolor="#000000" onLoad="inicio()"  onKeyPress="verificatecla(event)"> <!--aqui comeÁa o html-->
+<body bgcolor="#000000" onLoad="inicio()"  onKeyPress="verificatecla(event)"> <!--aqui come√ßa o html-->
 <center>
 
  <table border="10" cellspacing=0 cellpadding=2 bordercolor="#FF3300">
@@ -215,16 +216,16 @@
        <input type="text" id="calculo" size=26 style="text-align:right;"></td>
   </tr>
 
-  <tr><!--comeÁo da tabela-->
-    <td align="center" colspan=2><input type="button" value="M+" name="mem" style="WIDTH: 70px;font-weight: bold" id="mem1" onclick="memo();"></td><!--onclick chama a funÁao mostra quando clicado-->
+  <tr><!--come√ßo da tabela-->
+    <td align="center" colspan=2><input type="button" value="M+" name="mem" style="WIDTH: 70px;font-weight: bold" id="mem1" onclick="memo();"></td><!--onclick chama a funÔøΩao mostra quando clicado-->
     <td align="center"><input type="button" value="MR" style="WIDTH: 30px;font-weight: bold" id="botaoMR" onclick="chamamem();"></td>
-    <td align="center"><input type="button" value="MC" style="WIDTH: 30px;font-weight: bold" id="botaoMC" onclick="cancelamemoria();"></td><!--chama a funÁao coleta-->
-    <td align="center"><input type="button" value="C" id="rest" style="WIDTH: 30px;font-weight: bold"  onclick="novocalculo();"></td>       <!--chama a funÁao raiz-->
+    <td align="center"><input type="button" value="MC" style="WIDTH: 30px;font-weight: bold" id="botaoMC" onclick="cancelamemoria();"></td><!--chama a fun√ß√£o coleta-->
+    <td align="center"><input type="button" value="C" id="rest" style="WIDTH: 30px;font-weight: bold"  onclick="novocalculo();"></td>       <!--chama a fun√ß√£o raiz-->
   </tr>
 
 
   <tr>
-    <td align="center"><input type="button" value="  7  " style="WIDTH: 30px;" id="botao7" onclick="mostra(7);"></td><!--onclick chama a funÁao mostra quando clicado-->
+    <td align="center"><input type="button" value="  7  " style="WIDTH: 30px;" id="botao7" onclick="mostra(7);"></td><!--onclick chama a fun√ß√£o mostra quando clicado-->
     <td align="center"><input type="button" value="  8  " style="WIDTH: 30px;" id="botao8" onclick="mostra(8);"></td>
     <td align="center"><input type="button" value="  9  " style="WIDTH: 30px;" style="WIDTH: 30px; id="botao9" onclick="mostra(9);"></td>
     <td align="center"><input type="button" value="   /   " style="WIDTH: 30px;" id="botao/" onclick="coleta('/');"></td>
@@ -251,8 +252,8 @@
    <td align="center"><input type="button" value="  0  " style="WIDTH: 30px;" id="botao0" onclick="mostra(0);"/></td>
    <td align="center"><input type="button" value="   .  " style="WIDTH: 30px;" name="ponto" id="ponto" onclick="mostra('.');"> </td>
    <td align="center"><input type="button" value="Cos " style="WIDTH: 30px;" id="Cos" onclick="cos();"></td>
-   <td align="center"><input type="button" value="   +  " style="WIDTH: 30px;"  id="botao+" onclick="coleta('+');"></td><!--chama a funÁao coleta-->
-   <td align="center"><input type="button" value="  VØ " style="WIDTH: 30px;" id="raizz" onclick="raiz();"></td>       <!--chama a funÁao raiz-->
+   <td align="center"><input type="button" value="   +  " style="WIDTH: 30px;"  id="botao+" onclick="coleta('+');"></td><!--chama a fun√ß√£o coleta-->
+   <td align="center"><input type="button" value="  VÔøΩ " style="WIDTH: 30px;" id="raizz" onclick="raiz();"></td>       <!--chama a fun√ß√£o raiz-->
   </tr>
   <tr>
     <td align="center"><input type="button" name="vazio" size=1 value="" style="WIDTH: 30px;"> </td>
@@ -264,40 +265,27 @@
  </table>
 </center>
 
-<h1><font color="#FFFFFF"><center>InstruÁoes De Uso</center></font></h1><!--comeÁo das instruÁoes-->
+<h1><font color="#FFFFFF"><center>Instru√ß√µes De Uso</center></font></h1><!--come√ßo das instru√ß√µes-->
 <center>
  <font color="#FFFFFF">
 <form name="ver">
     <ul>
-      <li>A calculadora pode ser usada clicando-se nos botıes ou usando o teclado do seu micro.
-      <li>Quando se quer limpar tudo click no bot„o C ou tecle DEL ou ESC.
-      <li>Pode-se fazer c·lculos em sÈrie Ex: 34+24-3/328*3, etc...
-      <li>A memÛria sÛ funciona se tiver um n˙mero diferente de zero.
-      <li>Para calcular o cos,tan,sen,sqrl digite primeiro o n˙mero e depois a operaÁao.
+      <li>A calculadora pode ser usada clicando-se nos bot√µes ou usando o teclado do seu micro.
+      <li>Quando se quer limpar tudo click no bot√£o C ou tecle DEL ou ESC.
+      <li>Pode-se fazer c√°lculos em s√©rie Ex: 34+24-3/328*3, etc...
+      <li>A mem√≥ria s√≥ funciona se tiver um n√∫mero diferente de zero.
+      <li>Para calcular o cos,tan,sen,sqrl digite primeiro o n√∫mero e depois a opera√ß√£o.
       <li>O resutado do cosseno da tangente e do seno sao mostrados em radianos.
-      <li>Quando se armazena um n˙mero na memÛria a indicaÁ„o M+ fica em vermelho.<br>
-          Para armazenar um n˙mero na memÛria click no bot„o M+ ou aperte a tecla m ou M do teclado.<br>
-          Para chamar o n˙mero que est· na memÛria, click no bot„o MR ou a tecla r ou R<br>
-          Para apagar o n˙mero da memÛria click no bot„o MC ou tecle c ou C.
-      <li>O botao CE limpa apenas o n˙mero que est· no visor.
+      <li>Quando se armazena um n√∫mero na mem√≥ria a indica√ß√£o M+ fica em vermelho.<br>
+          Para armazenar um n√∫mero na mem√≥ria click no bot√£o M+ ou aperte a tecla m ou M do teclado.<br>
+          Para chamar o n√∫mero que est√° na mem√≥ria, click no bot√°o MR ou a tecla r ou R<br>
+          Para apagar o n√∫mero da mem√≥ria click no bot√£o MC ou tecle c ou C.
+      <li>O botao CE limpa apenas o n√∫mero que est√° no visor.
       
     </ul>
 </form>
  </font>
 </center>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
